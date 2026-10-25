@@ -50,7 +50,7 @@
   --glow:rgba(34,211,238,.18)}
 html {
   scroll-behavior:smooth;
-  scroll-padding-top:80px}
+  scroll-padding-top:64px}
 * {
   box-sizing:border-box}
 body {
@@ -161,7 +161,10 @@ nav a.on {
   grid-template-columns:1.1fr .9fr;
   gap:40px;
   align-items:center;
-  padding:64px 0 48px}
+  align-content:center;
+  padding:40px 0;
+  min-height:calc(100vh - 64px);
+  min-height:calc(100svh - 64px - env(safe-area-inset-top,0px) - env(safe-area-inset-bottom,0px))}
 .tag {
   display:inline-flex;
   gap:8px;
@@ -294,7 +297,12 @@ h1 span {
   left:0;
   font-family:ui-monospace,Menlo,monospace}
 section {
-  padding:36px 0}
+  padding:40px 0;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  min-height:calc(100vh - 64px);
+  min-height:calc(100svh - 64px - env(safe-area-inset-top,0px) - env(safe-area-inset-bottom,0px))}
 .card {
   border:1px solid var(--line);
   border-radius:16px;
